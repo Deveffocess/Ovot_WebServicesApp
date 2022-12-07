@@ -565,6 +565,7 @@ namespace OVOT_SERVICE
                             Mailto = "";
                         }
 
+
                         DataSet dsEmail = new DataSet();
                         dsEmail = dal.GetIssueConEmails(IssueTypeCode);
                         if (Convert.ToString(dsEmail.Tables[0].Rows[0]["UserEmail"]) != null)
