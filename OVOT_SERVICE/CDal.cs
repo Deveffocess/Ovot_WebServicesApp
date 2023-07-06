@@ -214,7 +214,7 @@ namespace OVOT_SERVICE
 
             DataSet DSGet = new DataSet();
 
-            string CommandText = " SELECT C.Customer, C.MobileNo, C.InvoiceNo, P.ProductCat, P.SubCat, C.Model, C.ProductSrNo, C.IncentiveAmt, C.ApproveStatus, E.UserName as 'ApproveBy', D.Reason, DATE_FORMAT(C.CreatedDate, '%Y-%m-%d') as CreatedDate,DATE_FORMAT(C.ApproveDate, '%Y-%m-%d') as ApproveDate, C.Remarks FROM CUSTOMERINVOICE as C" +
+            string CommandText = "SELECT C.Customer, C.MobileNo, C.InvoiceNo, P.ProductCat, P.SubCat, C.Model, C.ProductSrNo, C.IncentiveAmt, C.ApproveStatus, E.UserName as 'ApproveBy', D.Reason, DATE_FORMAT(C.CreatedDate, '%Y-%m-%d') as CreatedDate,DATE_FORMAT(C.ApproveDate, '%Y-%m-%d') as ApproveDate, C.Remarks FROM CUSTOMERINVOICE as C" +
                 " left join PRODUCTMASTER as P on C.PRODUCTCODE = P.PRODUCTCODE" +
                 " LEFT JOIN rejectionreason AS D ON C.RejectionReason = D.ReasonCode " +
                 " LEFT JOIN usermaster AS E ON C.ApproveBy = E.UserCode " +
