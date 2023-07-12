@@ -439,7 +439,7 @@ namespace OVOT_SERVICE
 
                 //GenrateAgreementandSendMail(ISDCode);
                 ds = dal.UpdateISDAggreement(ISDCode, AcceptanceStatus, UserCode, IPAdd);
-
+                
 
                 if (ds.Tables[0].Rows.Count > 0)
                 {
