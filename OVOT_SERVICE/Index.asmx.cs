@@ -436,8 +436,7 @@ namespace OVOT_SERVICE
 
             try
             {
-
-                //GenrateAgreementandSendMail(ISDCode);
+               //GenrateAgreementandSendMail(ISDCode);
                 ds = dal.UpdateISDAggreement(ISDCode, AcceptanceStatus, UserCode, IPAdd);
                 
 
@@ -495,9 +494,7 @@ namespace OVOT_SERVICE
             try
             {
 
-
                 ds = dal.UpdateIssueConfirmation(IssueCode);
-
 
                     Common[] met = new Common[]
                     {
@@ -508,7 +505,6 @@ namespace OVOT_SERVICE
                     };
                     //return new JavaScriptSerializer().Serialize(emp);
                     Context.Response.Write(js.Serialize(new { met }));
-                
 
             }
             catch (Exception ex)
